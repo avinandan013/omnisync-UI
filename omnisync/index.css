@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .links{
+    height: 100px;
+    width: 200px;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+ul li a{
+    display: block;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li a:hover{
+    transform: translateY(-5px);
+}
