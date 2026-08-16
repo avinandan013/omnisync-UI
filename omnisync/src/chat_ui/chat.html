@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniSync</title>
+    <title>OmniSync-chat</title>
     <link rel="stylesheet" href="./chat.css">
 </head>
 
@@ -14,40 +14,41 @@
     </div>
     <div class="container-box">
 
-        <div class="left-nav">
+        <div class="left-section">
 
-            <div class="rooms">
-
+            <div class="room-header">
                 <h4>Rooms</h4>
-                <div class="create-room">
                     <button>+ Create Room</button>
-                </div>
-
-                <div class="list-of-rooms">
-                    <ul>
-                        <li># General</li>
-                        <li># Gaming</li>
-                        <li># Java</li>
-                        <li># Misc</li>
+            </div>
+            
+            <div class="list-of-rooms">
+                <ul>
+                        <li><button id="room-1"># General</button></li>
+                        <li><button id="room-2"># Java</button></li>
+                        <li><button id="room-3"># Apex</button></li>
+                        <li><button id="room-4"># Misc</button></li>
                     </ul>
-                </div>
-                
             </div>
 
         </div>
 
 
-        <div class="right-nav">
+        <div class="right-section">
 
             <div class="chats">
-                <p>chats</p>
+                <div class="chat-window">
+                    <div class="chat-header"></div>
+                    <div class="chat-body"></div>
+                    <div class="send-text">
+                        <input type="text" placeholder="Type a message...">
+                        <button type="submit">[Send]</button>
+                    </div>
+                </div>
             </div>
-            <div class="send-text">
-                <input type="text" placeholder="Type a message...">
-                <button type="submit">[Send]</button>
-            </div>
+
         </div>
     </div>
+    <script src="./chat.js"></script>
 </body>
 
 </html>

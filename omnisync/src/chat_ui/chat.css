@@ -28,45 +28,60 @@ body {
     display: flex;
 }
 
-.left-nav {
-    /* border: 2px solid blue; */
+.left-section {
+    height: 100%;
+    border: 1px solid black;
     min-width: 8em;
     max-width: 12em;
     display: flex;
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.rooms {
+
+
+.room-header {
+    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    gap: 1em;
+    border-bottom: 2px solid black;
 }
 
-.create-room {
-    border: 2px solid black;
-}
-
-.create-room:hover{
-    transform: translateY(-5px);
-    animation: ease-in 3s;
-}
-
-.create-room button {
+.room-header button {
+    font-family: 'Poppins', sans-serif;
     border: none;
     background: none;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease;
+}
 
+.room-header button:hover{
+    transform: translateY(-5px);
+}
+
+.list-of-rooms{
+    flex: 1;
+}
+
+.list-of-rooms ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+    gap:5px;
 }
 
 .list-of-rooms ul li {
     list-style: none;
 }
 
-.right-nav {
+.right-section {
     /* border: 2px solid green; */
     display: grid;
     width: 100%;
@@ -78,7 +93,25 @@ body {
 .chats {
     /* border: 2px solid red; */
     width: 100%;
-    height: 90%;
+    height: 100%;
+}
+
+.chat-window{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.chat-header{
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.chat-body{
+    flex: 1;
+    padding: 15px;
 }
 
 .send-text {
@@ -96,21 +129,19 @@ button {
 }
 
 .send-text input{
-    width: 90%;
+    width: 80%;
     border-radius: 4rem;
     border: none;
     padding: 1em 3em;
 }
 
-.send-text input:active{
-    border:2px solid red;
-}
-
 .send-text button{
     border: none;
     background: none;
+    transition: transform 0.3s ease-in-out;
 }
 
 .send-text button:hover{
-
+    transform: translateY(-5px);
+    cursor: pointer;
 }
